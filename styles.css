@@ -1,0 +1,181 @@
+/* ======== Estilo general inspirado en Free Fire ======== */
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2e0b00, #3e1300);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: backgroundMove 20s infinite alternate ease-in-out;
+    position: relative;
+}
+
+/* Animación de fondo fuego sutil */
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Añadimos un filtro de fuego animado */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://i.imgur.com/UYMrSsp.png') repeat; /* textura fuego */
+    opacity: 0.1;
+    pointer-events: none;
+    animation: fireMove 30s linear infinite;
+    z-index: 0;
+}
+
+@keyframes fireMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Títulos h1 y h2 con animación cambio de colores */
+h1, h2 {
+    background: linear-gradient(270deg, #ff6f00, #ff4500, #ff3300, #ff6f00);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: colorShift 6s ease infinite;
+    font-weight: 700;
+    text-align: center;
+    text-shadow:
+      0 0 10px #ff6f00,
+      0 0 20px #ff4500,
+      0 0 30px #ff3300;
+}
+
+/* Animación que mueve el gradiente */
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Título h3 fijo con brillo fuego */
+h3 {
+    text-align: center;
+    color: #ff6f00;
+    text-shadow:
+      0 0 10px #ff6f00,
+      0 0 20px #ff6f00,
+      0 0 30px #ff4500,
+      0 0 40px #ff3300;
+    font-weight: 700;
+}
+
+/* Párrafos */
+p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #ddd;
+}
+
+/* Tabla estilo Free Fire */
+table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(62, 19, 0, 0.7);
+    box-shadow: 0 0 20px #ff6f00;
+    border: 1px solid #ff6f00;
+    position: relative;
+    z-index: 1;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ff6f00;
+    font-weight: 600;
+}
+
+th {
+    background-color: rgba(255, 111, 0, 0.3);
+    color: #ffbb66;
+    font-size: 1.1em;
+}
+
+td input {
+    background: rgba(30, 10, 0, 0.85);
+    border: 1px solid #ff6f00;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-family: inherit;
+}
+
+/* Hover con fuego sutil */
+tr:hover {
+    background: rgba(255, 111, 0, 0.15);
+    transition: background 0.3s;
+}
+
+/* Botones fuego animados */
+button {
+    background: #ff6f00;
+    border: none;
+    padding: 12px 20px;
+    margin: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 5px;
+    box-shadow:
+      0 0 10px #ff6f00,
+      0 0 20px #ff3300,
+      0 0 40px #ff2200;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,111,0,0.4) 0%, transparent 70%);
+    animation: sparkle 3s infinite;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    background: #ff7f20;
+    box-shadow:
+      0 0 20px #ff7f20,
+      0 0 40px #ff4400,
+      0 0 60px #ff2200;
+    transform: scale(1.05);
+}
+
+@keyframes sparkle {
+    0% { transform: rotate(0deg) translate(10px) rotate(0deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: rotate(360deg) translate(10px) rotate(-360deg); opacity: 0; }
+}
+
+/* Partículas brillantes */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: 0;
+}

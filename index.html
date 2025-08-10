@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Liga Tica Free Fire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="funciones.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Liga Tica Free Fire</h1>
+    <h2>Contador de Puntos Free Fire</h2>
+    <p>Bienvenido a la Liga Tica Free Fire. Aquí puedes llevar un registro de tus puntos y estadísticas.</p>
+
+    <form id="pointsForm">
+        <table border="1" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre del equipo</th>
+                    <th>Número de Partida</th>
+                    <th>Kills</th>
+                    <th>Posición</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas 1 a 12 -->
+                <tr class="team-row">
+                    <td>1</td>
+                    <td><input type="text" id="name1" required></td>
+                    <td><input type="number" id="number1" required></td>
+                    <td><input type="number" id="kills1" required></td>
+                    <td><input type="number" id="posi1" required min="1" max="12"></td>
+                    <td id="result1"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>2</td>
+                    <td><input type="text" id="name2" required></td>
+                    <td><input type="number" id="number2" required></td>
+                    <td><input type="number" id="kills2" required></td>
+                    <td><input type="number" id="posi2" required min="1" max="12"></td>
+                    <td id="result2"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>3</td>
+                    <td><input type="text" id="name3" required></td>
+                    <td><input type="number" id="number3" required></td>
+                    <td><input type="number" id="kills3" required></td>
+                    <td><input type="number" id="posi3" required min="1" max="12"></td>
+                    <td id="result3"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>4</td>
+                    <td><input type="text" id="name4" required></td>
+                    <td><input type="number" id="number4" required></td>
+                    <td><input type="number" id="kills4" required></td>
+                    <td><input type="number" id="posi4" required min="1" max="12"></td>
+                    <td id="result4"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>5</td>
+                    <td><input type="text" id="name5" required></td>
+                    <td><input type="number" id="number5" required></td>
+                    <td><input type="number" id="kills5" required></td>
+                    <td><input type="number" id="posi5" required min="1" max="12"></td>
+                    <td id="result5"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>6</td>
+                    <td><input type="text" id="name6" required></td>
+                    <td><input type="number" id="number6" required></td>
+                    <td><input type="number" id="kills6" required></td>
+                    <td><input type="number" id="posi6" required min="1" max="12"></td>
+                    <td id="result6"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>7</td>
+                    <td><input type="text" id="name7" required></td>
+                    <td><input type="number" id="number7" required></td>
+                    <td><input type="number" id="kills7" required></td>
+                    <td><input type="number" id="posi7" required min="1" max="12"></td>
+                    <td id="result7"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>8</td>
+                    <td><input type="text" id="name8" required></td>
+                    <td><input type="number" id="number8" required></td>
+                    <td><input type="number" id="kills8" required></td>
+                    <td><input type="number" id="posi8" required min="1" max="12"></td>
+                    <td id="result8"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>9</td>
+                    <td><input type="text" id="name9" required></td>
+                    <td><input type="number" id="number9" required></td>
+                    <td><input type="number" id="kills9" required></td>
+                    <td><input type="number" id="posi9" required min="1" max="12"></td>
+                    <td id="result9"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>10</td>
+                    <td><input type="text" id="name10" required></td>
+                    <td><input type="number" id="number10" required></td>
+                    <td><input type="number" id="kills10" required></td>
+                    <td><input type="number" id="posi10" required min="1" max="12"></td>
+                    <td id="result10"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>11</td>
+                    <td><input type="text" id="name11" required></td>
+                    <td><input type="number" id="number11" required></td>
+                    <td><input type="number" id="kills11" required></td>
+                    <td><input type="number" id="posi11" required min="1" max="12"></td>
+                    <td id="result11"></td>
+                </tr>
+                <tr class="team-row">
+                    <td>12</td>
+                    <td><input type="text" id="name12" required></td>
+                    <td><input type="number" id="number12" required></td>
+                    <td><input type="number" id="kills12" required></td>
+                    <td><input type="number" id="posi12" required min="1" max="12"></td>
+                    <td id="result12"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <button type="reset">Reiniciar</button>
+        <button type="button" id="calculateButton">Calcular Puntos</button>
+    </form>
+
+</body>
+</html>
